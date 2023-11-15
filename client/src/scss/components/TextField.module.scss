@@ -1,0 +1,39 @@
+@import "../libs//variable.scss";
+
+
+
+.formBoxInputBox{
+    margin-bottom: 3rem;
+    & > input {
+        box-sizing: border-box;
+        position: relative;
+        color: $main-color;
+        outline:none;
+        padding-bottom: 9px;
+        padding-left: 25px;
+        width: 100%;
+        border: none;
+        border-bottom: 3px solid $main-color;
+        &:focus {
+            border-bottom: 3px solid $green-color; 
+        }
+    }
+    &Icon{
+        position: absolute;
+        z-index: 1;
+        user-select: none;
+        
+    }
+    &Info{
+        display: block;
+        margin-bottom: .2rem;
+        font-weight: $weight-700;
+        color: $main-color;
+        user-select: none;
+    }
+    
+}
+.inputError {
+    color: red;
+}
+    

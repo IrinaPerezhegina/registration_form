@@ -1,0 +1,23 @@
+@import "../libs//variable.scss";
+
+.myLink {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    align-items: center;
+    font-weight: $weight-500;
+    width: 35%;
+    height: 5rem;
+    border: none;
+    color: white;
+    background: $green-color;
+    border-radius: 4px;
+    text-transform: uppercase;
+    &:hover{ 
+     border: 1px solid $green-color;
+     background-color:$green-background;
+     color: $green-color;
+    }
+    
+    
+}
