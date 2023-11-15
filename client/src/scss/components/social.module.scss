@@ -1,0 +1,27 @@
+@import "../libs//variable.scss";
+
+.socialWrapper{
+    display: flex;
+    gap: 2rem;
+  
+.social{
+   
+    text-align: center;
+    border-radius: 50%;
+    width: 47px;
+    height: 47px;
+    background-color: $green-color;
+    &:hover{
+        background-color: black;
+    }
+    >img {
+        height: 80%;
+        width: 80%;
+       padding-top: 20%;
+       padding-left: 5%;
+        vertical-align: middle;
+        }
+
+    }
+    
+}
