@@ -1,7 +1,3 @@
 {
-	"apiEndpoint": "https://registration-form-sable.vercel.app/api"
+	"apiEndpoint": "https://registration-form-ten-green.vercel.app/api"
 }
-
-// {
-// 	"apiEndpoint": "http://localhost:8080/api"
-// }
