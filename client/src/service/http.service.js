@@ -25,6 +25,7 @@ http.interceptors.request.use(
 		if (accessToken) {
 			config.headers = {
 				...config.headers,
+				"Access-Control-Allow-Origin": "*",
 				Authorization: `Bearer ${accessToken}`,
 			};
 		}
