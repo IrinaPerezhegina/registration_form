@@ -43,9 +43,6 @@ const LoginForm = () => {
 		const isValid = validate();
 		if (!isValid) return e;
 		dispatch(login(data));
-		// if (!loginError) {
-		// 	navigate("/auth");
-		// }
 	};
 	const handleChange = (target) => {
 		setData((prevState) => ({

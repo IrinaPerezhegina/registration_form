@@ -6,3 +6,6 @@ function App() {
 }
 
 export default App;
+// {
+// 	"apiEndpoint": "http://localhost:8080/api"
+// }
