@@ -12,7 +12,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors({ origin: true }));
+app.use(cors({ origin: false }));
 app.use("/api", routes);
 
 mongoose.set("strictQuery", true);
