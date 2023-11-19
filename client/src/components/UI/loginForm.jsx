@@ -37,7 +37,7 @@ const LoginForm = () => {
 		return Object.keys(errors).length === 0;
 	};
 	const isValid = Object.keys(errors).length === 0;
-	console.log(getAuthUser);
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const isValid = validate();
@@ -50,7 +50,7 @@ const LoginForm = () => {
 			[target.name]: target.value,
 		}));
 	};
-	console.log(loginError);
+
 	return (
 		<div className={styles.container}>
 			<section className={styles.form}>

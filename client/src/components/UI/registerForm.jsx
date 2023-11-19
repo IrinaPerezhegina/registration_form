@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "../../scss/components/Register.module.scss";
-import { getAuthErrors, signUp } from "../../store/user";
+import { getAuthErrors, getCurrentUserId, signUp } from "../../store/user";
 import { validateSchemaRegister } from "../../utils/validateSxhemaRegister";
 import TextFieldInput from "./TextFieldInput";
 import MySubmit from "./MySubmit";
@@ -18,14 +18,15 @@ const RegisterForm = () => {
 		password: "",
 		confirm_password: "",
 	});
+	const getAuthUser = useSelector(getCurrentUserId());
 	const registerError = useSelector(getAuthErrors());
 	const [errors, setErrors] = useState({});
 
 	useEffect(() => {
-		if (registerError) {
+		if (getAuthUser) {
 			navigate("/auth");
 		}
-	}, [registerError]);
+	}, [getAuthUser]);
 
 	useEffect(() => {
 		validate();

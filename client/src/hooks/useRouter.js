@@ -5,9 +5,10 @@ import RegisterForm from "../components/UI/registerForm";
 import LoginForm from "../components/UI/loginForm";
 import MainPage from "../pages/MainPage";
 import AuthorizedUserPage from "../pages/AuthorizedUserPage";
+import ErrorPage from "../pages/Error";
 
 export const useRouter = () => {
-	const routes = useRoutes([
+	const privateRoutes = useRoutes([
 		{
 			path: "/",
 			element: <MainPage />,
@@ -20,15 +21,26 @@ export const useRouter = () => {
 			path: "/login",
 			element: <LoginForm />,
 		},
+
 		{
-			path: "/auth",
-			element: <AuthorizedUserPage />,
+			path: "/error",
+			element: <ErrorPage />,
 		},
 		{
 			path: "*",
 			element: <Navigate to={"error"} />,
 		},
 	]);
+	const publicRoutes = useRoutes([
+		{
+			path: "/auth",
+			element: <AuthorizedUserPage />,
+		},
+		{
+			path: "*",
+			element: <Navigate to={"/auth"} />,
+		},
+	]);
 
-	return routes;
+	return [privateRoutes, publicRoutes];
 };
